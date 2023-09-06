@@ -15,4 +15,8 @@
     <string name="txt_pass">Clave</string>
     <string name="txt_repeatPass">Repetir Clave</string>
 
+    <!--  Main  -->
+    <string name="txt_welcome">Bienvenidos</string>
+    <string name="txt_android">Curso de Android</string>
+
 </resources>

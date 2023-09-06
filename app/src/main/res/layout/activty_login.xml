@@ -49,6 +49,7 @@
 
 
     <Button
+        android:id="@+id/btnlogin"
         android:layout_width="match_parent"
         android:text="@string/btn_login"
         android:layout_height="60dp"
