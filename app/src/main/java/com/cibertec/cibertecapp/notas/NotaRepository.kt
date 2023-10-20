@@ -13,6 +13,7 @@ class NotaRepository  (application: Application){
         CibertecRoomDatabase.getTnstance(application)?.noteDao()
 
 
+    // insert
     suspend fun inserTNotaWithCoroutines(nota: Nota){
         processInsertNote(nota)
     }
@@ -22,6 +23,15 @@ class NotaRepository  (application: Application){
         }
     }
 
+    // Update
+    suspend fun updateNotaWithCoroutines(nota: Nota){
+        processUpdateNote(nota)
+    }
+    private suspend fun processUpdateNote(nota: Nota){
+        withContext(Dispatchers.Default){
+            noteDao?.update(nota)
+        }
+    }
     fun getNota(): LiveData<List<Nota>>?{
         return noteDao?.list()
     }
